@@ -5,7 +5,7 @@
 #### By _**Noah Woodrum**_
 
 ### Git Pages Link
-[Noah Woodrums project2 Read.me (GitHub Pages)](http://127.0.0.1:5500/index.html)
+[Noah Woodrums project3 Read.me (GitHub Pages)](https://github.com/NoahWoodrum/project3.git)
 
 ## Technologies Used
 
@@ -58,28 +58,28 @@ SOFTWARE.
 ## Contact Information
 
 Noah Woodrum heymymomthinksimcool@gmail.com# Test suite
-Describe: Translator()
+Describe: BeepBoop()
 
 Test: If number contains "1" it returns "beep"
-Code: Translator(1)
+Code: BeepBoop(1)
 Expected Output: "beep"
 
 Test: If number contains "2" it returns "boop"
-Code: Translator(2)
+Code: BeepBoop(2)
 Expected Output: "boop"
 
 Test: If number contains "3" it returns "wont you be my neighbor"
-Code: Translator(3)
-Expected Output: "wont you be my neighbor"
+Code: BeepBoop(3)
+Expected Output: "Won't you be my neighbor"
 
 Test: If number contains "13" it returns "wont you be my neighbor"
-Code: Translator(13)
-Expected Output: "wont you be my neighbor"
+Code: BeepBoop(13)
+Expected Output: "Won't you be my neighbor"
 
 Test: If number contains "21" it returns "boop"
-Code: Translator(21)
+Code: BeepBoop(21)
 Expected Output: "boop"
 
 Test: If number contains "32" it returns "wont you be my neighbor"
-Code: Translator(32)
-Expected Output: "wont you be my neighbor"
+Code: BeepBoop(32)
+Expected Output: "Won't you be my neighbor"
