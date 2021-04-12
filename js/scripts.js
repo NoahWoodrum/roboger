@@ -1,26 +1,37 @@
 let numberArray = []
 
 //buisness logic
-function BeepBoop(number) {
-  let numberInt = parseInt(number);
-  for (let i = 0; i <= numberInt; i+=1);
-  const numbers = (""+index).split("")
 
-  if (index === 1 || numbers.includes("1")) {
-    outputArray.push("beep")
-  } else if (index === 2 || numbers.includes("2")) {
-    outputArray.push("boop")
-  } else if (index === 3 || numbers.includes("3")) {
-    outputArray.push("Won't your be my neighbor?")
-  } else if (number === 13) {
-    return "Won't you be my neighbor"
-  } else if (number === 21) {
-    return "boop"
-  } else if (number === 32) {
-    return "Won't you be my neighbor"
-  } 
-  //let numberArray = ["0", "beep", "boop", "wont you be my neighbor", "4", "5"];
+function beepBoop(number) {
+
+  if (Number.isNaN(Number(number)) && number !== "0") return new Error("You must submit a number. Please try again.")
+  const outputArray = [0]
+  if (number === "0") return outputArray
+
+  for (let index = 1; index <= Number(number); index += 1) {
+    const numbers = (""+index).split("")
+    if (index === 3 || numbers.includes("3")) {
+      outputArray.push("Won't you be my neighbor?")
+      continue
+    }
+    if (index === 2 || numbers.includes("2")) {
+      outputArray.push("Boop!")
+      continue
+    }
+    if (index === 1 || numbers.includes("1")) {
+      outputArray.push("Beep!")
+      continue
+    }
+    outputArray.push(index)
+  }
+  return outputArray
 }
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault()
+    const result = beepBoop(userInput)
+  }
 function resetApplication() {
   $(".results").text("").hide()
   $("form").trigger("reset")
